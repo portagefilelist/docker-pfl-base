@@ -1,6 +1,6 @@
 FROM gentoo/portage:latest as portage
 
-FROM gentoo/stage3-amd64:latest
+FROM gentoo/stage3:amd64-systemd
 
 COPY --from=portage /var/db/repos/gentoo /var/db/repos/gentoo
 
